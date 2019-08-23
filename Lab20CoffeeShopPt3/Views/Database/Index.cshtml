@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@model  IEnumerable<Lab20CoffeeShopPt3.Models.Users>
+<form action="/Database/MakeNewUser" method="post">
+    <table class="table">
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>First Name</th>
+        <th>Last name</th>
+        <th>User Funds</th>
+
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.UserPass</td>
+                <td>@user.UserFirst</td>
+                <td>@user.UserLast</td>
+                <td>@user.UserFunds</td>
+
+                @*<td><a href="Company/RemoveEmployee?Id=@user.UserId"><input type="submit" value="Remove" class="btn-block" /></a></td>*@
+            </tr>
+
+        }
+
+    </table>
+    </form>

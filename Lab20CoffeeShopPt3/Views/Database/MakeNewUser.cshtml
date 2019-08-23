@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "MakeNewUser";
+}
+@model Lab20CoffeeShopPt3.Models.Users
+<h1 style="color:burlywood;">Make New User!</h1>
+<h3 style="color:burlywood;">Please fill out the form below!</h3>
+
+<form action="/Database/RegisterUser" method="post">
+
+    <h5>
+        @Html.ActionLink("Make New User", "MakeNewUser", "Database")
+    </h5>
+
+    
+</form>

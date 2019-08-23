@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterUser";
+}
+
+@model Lab20CoffeeShopPt3.Models.Users
+<h1 style="color:burlywood">Register User</h1>
+
+<form action="/Database/RegisterUser" method="post">
+
+    <div class="fields" style="color: burlywood">
+        <div class="fields">
+            <div>
+
+                @Html.LabelFor(m => m.UserName, "User Name")
+                @Html.TextBoxFor(m => m.UserName)
+
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Email, "Email Address")
+                @Html.TextBoxFor(m => m.Email)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.UserPass, "Password")
+                @Html.TextBoxFor(m => m.UserPass)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.UserFirst, "First Name")
+                @Html.TextBoxFor(m => m.UserFirst)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.UserLast, "Last Name")
+                @Html.TextBoxFor(m => m.UserLast)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.UserFunds, "Money")
+                @Html.TextBoxFor(m => m.UserFunds)
+            </div>
+
+
+            <input type="submit" value="Sign me up!" />
+
+        </div>
+
+    </div>
+</form>
